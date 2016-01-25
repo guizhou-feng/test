@@ -2,6 +2,8 @@ package com.example
 
 import spray.json._
 import DefaultJsonProtocol._
+import java.util.Date
+import java.text.SimpleDateFormat
 
 object Hi {
     implicit def abc(string: String) = new PimpString(string)
@@ -16,6 +18,16 @@ object Hi {
         println(v.productArity)
         println(v.productPrefix)
         println(v)
+        
+        val currentDate = new Date()
+        println(currentDate.getTime)
+        val newDate = new Date()
+        newDate.setTime(currentDate.getTime)
+        println(newDate.getTime)
+        
+        val defaultDateFormat = new SimpleDateFormat()
+        defaultDateFormat.applyPattern("yyyy/MM/dd HH:mm:ss")
+        println(defaultDateFormat.format(newDate))
         
     }
 
