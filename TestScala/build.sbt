@@ -18,4 +18,5 @@ libraryDependencies ++= Seq(
 EclipseKeys.withSource := true
 
 // mainClass in Compile := Some("com.example.TestSparkGradientBoostedTrees")
-mainClass in Compile := Some("com.example.TestSparkRandomForest")
+// mainClass in Compile := Some("com.example.TestSparkRandomForest")
+mainClass in Compile := Some("com.example.TestSparkRDDSaveAndLoad")

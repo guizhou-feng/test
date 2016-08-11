@@ -29,8 +29,30 @@ object Hi {
         defaultDateFormat.applyPattern("yyyy/MM/dd HH:mm:ss")
         println(defaultDateFormat.format(newDate))
         
+        new B().hello()
+        
+        println(ModelingQueryResultColumnInfo.values().map { _.toString()}.contains("ORDERID"))
+        
     }
 
+}
+
+class A {
+  def hello() = {
+    println("Hello " + txt)
+    println(this.getClass.getName)
+  }
+  
+  def txt = {
+    "A"
+  }
+}
+
+class B extends A {
+  
+  override def txt = {
+    "B"
+  }
 }
 
 case class abc(a: Integer, b: Integer)
